@@ -4,7 +4,7 @@ FROM veritrans/jdk:oracle-jdk8
 # disable interactive functions
 ENV DEBIAN_FRONTEND noninteractive
 
-# Install Java
+# Download gradle & install it to /usr/local. Create symlink /usr/bin/gradle.
 RUN apt-get update && \
   apt-get dist-upgrade -y && \
   apt-get -y install unzip && \
